@@ -30,4 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_name: "sample app"
+  Home: "Home"
+  Help: "Help"
+  Login: "Login"
+  Contact: "Contact"
+  About: "About"
+  News: "News"
+  welcome: "Welcome to the Sample App"
+  signup_now: "Sign up now!"
+  home_page_text_html: "This is the home page for the %{href} sample application."

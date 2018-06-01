@@ -1,0 +1,11 @@
+ja:
+  app_name: "サンプルアプリ"
+  Home: "ホーム"
+  Help: "ヘルプ"
+  Login: "ログイン"
+  Contact: "連絡"
+  About: "このアプリについて"
+  News: "ニューズ"
+  welcome: "サンプルアプリへようこそ"
+  signup_now: "今すぐサインアップ！"
+  home_page_text_html: "これは %{href} サンプルアプリケーションのホームページです."

@@ -1,11 +1,18 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
+    <%= link_to (t :app_name), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><%= link_to (t :Home),   root_path %></li>
+        <li><%= link_to (t :Help),   help_path %></li>
+        <li><%= link_to (t :Login), '#' %></li>
+        <li>
+        <% if I18n.locale == I18n.default_locale %>
+          <%= link_to "日本語", { :locale=>'ja' } %>
+        <% else %>
+          <%= link_to "English", { :locale=>'en' } %>
+        <%end%>
+        </li>
       </ul>
     </nav>
   </div>
