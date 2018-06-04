@@ -1,0 +1,15 @@
+<footer class="footer">
+  <small>
+    <%= t("view.footer.credit_html", :href1 => link_to("Ruby on Rails Tutorial", 
+            "http://www.railstutorial.org/"), :href2 => link_to("Michael Hartl", 
+            "http://www.michaelhartl.com/")) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t('view.footer.About'), about_path %></li>
+      <li><%= link_to t('view.footer.Contact'), contact_path %></li>
+      <li><a href="http://news.railstutorial.org/">
+                                           <%= t('view.footer.News') %></a></li>
+    </ul>
+  </nav>
+</footer>
