@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'constants'
 
 class UserTest < ActiveSupport::TestCase
   def setup
@@ -21,12 +22,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "name should not be too long" do
-    @user.name = "a" * 51
+    @user.name = "a" * (Constants::USERNAME_MAX_LENGTH + 1)
     assert_not @user.valid?
   end
 
   test "email should not be too long" do
-    @user.email = "a" * 244 + "@example.com"
+    @user.email = "a" * (Constants::EMAIL_MAX_LENGTH - 
+                                     "@example.com".length + 1) + "@example.com"
     assert_not @user.valid?
   end
 
