@@ -34,6 +34,7 @@ ja:
       new:
         title: Sign Up
         text_html: This will be sign up page.
+        create_my_account: Create my account
     header:
       Home: "ホーム"
       Help: "ヘルプ"
