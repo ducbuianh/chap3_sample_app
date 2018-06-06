@@ -35,10 +35,17 @@ en:
         title: Sign Up
         text_html: This will be sign up page.
         create_my_account: Create my account
+    login:
+      title: Login
+      btn_login: Log in
     header:
       Home: Home
       Help: Help
       Login: Login
+      Users: Users
+      Profile: Profile
+      Settings: Settings
+      Log_out: Log out
     footer:
       Contact: Contact
       About: About
