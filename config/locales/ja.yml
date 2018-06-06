@@ -1,6 +1,11 @@
 ja:
   base:
     app_name: "サンプルアプリ"
+    form:
+      message:
+        title: 
+          one: The form contains 1 error.
+          other: The form contains %{count} errors.
   view:
     home:
       title: "Home"
@@ -31,10 +36,16 @@ ja:
         Contact the Ruby on Rails Tutorial about the sample app at the
         <a href="http://www.railstutorial.org/contact">contact page</a>.
     user:
+      index:
+        title: All users
+        delete: Delete
       new:
         title: Sign Up
         text_html: This will be sign up page.
         create_my_account: Create my account
+      edit:
+        title: Edit user
+        save_changes: Save changes
     login:
       title: Login
       btn_login: Log in

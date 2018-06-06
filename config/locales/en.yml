@@ -1,6 +1,11 @@
 en:
   base:
     app_name: sample app
+    form:
+      message:
+        title: 
+          one: The form contains 1 error.
+          other: The form contains %{count} errors.
   view:
     home:
       title: Home
