@@ -26,4 +26,9 @@ class ActionDispatch::IntegrationTest
                                           password: password,
                                           remember_me: remember_me } }
   end
+
+  # Append locale param for URL
+  def append_locale(url)
+    "#{url}?locale=#{I18n.locale}"
+  end
 end
