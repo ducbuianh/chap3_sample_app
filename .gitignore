@@ -34,3 +34,6 @@
 
 # Ignore Heroku files.
 /heroku/*
+
+# Ignore rubocop files.
+/.rubocop*

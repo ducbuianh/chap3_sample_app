@@ -21,18 +21,18 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'name should not be too long' do
-    @user.name = 'a' * (Constants::USERNAME_MAX_LENGTH + 1)
+    @user.name = 'a' * (USERNAME_MAX_LENGTH + 1)
     assert_not @user.valid?
   end
 
   test 'email should not be too long' do
-    @user.email = 'a' * (Constants::EMAIL_MAX_LENGTH - 11) + '@example.com'
+    @user.email = 'a' * (EMAIL_MAX_LENGTH - 11) + '@example.com'
     assert_not @user.valid?
   end
 
   test 'email validation should accept valid addresses' do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
-                         first.last@foo.jp alice+bob@baz.cn]
+    valid_addresses = %w(user@example.com USER@foo.COM A_US-ER@foo.bar.org
+                         first.last@foo.jp alice+bob@baz.cn)
     valid_addresses.each do |valid_address|
       @user.email = valid_address
       assert @user.valid?, "#{valid_address.inspect} should be valid"
@@ -61,5 +61,9 @@ class UserTest < ActiveSupport::TestCase
   test 'password should have a minimum length' do
     @user.password = @user.password_confirmation = 'a' * 5
     assert_not @user.valid?
+  end
+
+  test 'authenticated? should return false for a user with nil digest' do
+    assert_not @user.authenticated?('')
   end
 end

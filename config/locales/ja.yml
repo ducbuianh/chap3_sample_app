@@ -36,8 +36,9 @@ ja:
         text_html: This will be sign up page.
         create_my_account: Create my account
     login:
-      title: Login
-      btn_login: Log in
+      title: ログイン
+      btn_login: ログイン
+      chkbox_remember_me: 次回から自動的にログインする
     header:
       Home: "ホーム"
       Help: "ヘルプ"

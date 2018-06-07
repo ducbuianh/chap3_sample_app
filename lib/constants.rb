@@ -1,4 +1,0 @@
-module Constants
-  USERNAME_MAX_LENGTH = 50
-  EMAIL_MAX_LENGTH = 255
-end
