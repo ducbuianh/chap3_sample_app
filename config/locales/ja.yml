@@ -47,8 +47,9 @@ ja:
         title: Edit user
         save_changes: Save changes
     login:
-      title: Login
-      btn_login: Log in
+      title: ログイン
+      btn_login: ログイン
+      chkbox_remember_me: 次回から自動的にログインする
     header:
       Home: "ホーム"
       Help: "ヘルプ"

@@ -49,6 +49,7 @@ en:
     login:
       title: Login
       btn_login: Log in
+      chkbox_remember_me: Remember me on this computer
     header:
       Home: Home
       Help: Help
