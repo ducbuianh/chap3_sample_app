@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UsersIndexTest < ActionDispatch::IntegrationTest
-
   def setup
     @admin     = users(:michael)
     @non_admin = users(:archer)
@@ -16,7 +15,8 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     first_page_of_users.each do |user|
       assert_select 'a[href=?]', append_locale(user_path(user)), text: user.name
       unless user == @admin
-        assert_select 'a[href=?]', append_locale(user_path(user)), text: I18n.t('view.user.index.delete')
+        assert_select 'a[href=?]', append_locale(user_path(user)), 
+                      text: I18n.t('view.user.index.delete')
       end
     end
     assert_difference 'User.count', -1 do

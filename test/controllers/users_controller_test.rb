@@ -47,10 +47,14 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should not allow the admin attribute to be edited via the web" do
     log_in_as(@other_user)
     assert_not @other_user.admin?
-    patch user_path(@other_user), params: {
-                                    user: { password: @other_user.password,
-                                            password_confirmation: @other_user.password_confirmation,
-                                            admin: true } }
+    patch user_path(@other_user), params: { 
+                                    user: { 
+                                          password: @other_user.password,
+                                          password_confirmation: 
+                                            @other_user.password_confirmation,
+                                          admin: true 
+                                    }
+                                  }
     assert_not @other_user.admin?
   end
 
@@ -69,5 +73,3 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to append_locale(root_url)
   end
 end
-
-
